@@ -8,7 +8,7 @@
 					<div class="mb-4">
 						<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
 						<?php if ( ! has_excerpt() ): ?>
-	          <div class="post-excerpt lead mb-1"> This is a test<? the_excerpt(); ?></div>
+	          <div class="post-excerpt lead mb-1"> <? //the_excerpt(); ?></div>
 						<meta itemprop='description' content='<? the_excerpt(); ?>'/>
 						<?php endif; ?>
 				</div>
