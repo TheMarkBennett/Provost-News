@@ -1,0 +1,72 @@
+.post-category {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-category a, .post-category a:hover {
+  color: #000;
+  font-size: .7rem;
+}
+
+.post-divider {
+  height: 3px;
+  background: #ffcc00; /* Old browsers */
+  background: -moz-linear-gradient(left,  #C69F00 0%, #C69F00 70%, #ffcc00 70%, #ffcc00 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#C69F00), color-stop(50%,#C69F00), color-stop(50%,#ffcc00), color-stop(100%,#ffcc00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #C69F00 0%,#C69F00 70%,#ffcc00 70%,#ffcc00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #C69F00 0%,#C69F00 70%,#ffcc00 70%,#ffcc00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #C69F00 0%,#C69F00 70%,#ffcc00 70%,#ffcc00 100%); /* IE10+ */
+    background: linear-gradient(to right,  #C69F00 0%,#C69F00 70%,#ffcc00 70%,#ffcc00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C69F00', endColorstr='#ffcc00',GradientType=1 ); /* IE6-9 */
+
+}
+
+.entry-title {
+  margin-bottom: 0;
+}
+
+
+
+.entry-footer {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.figure .figure-img {
+  margin-bottom: 0;
+}
+
+.post-thumb {
+  f
+}
+
+.post-thumb figure {
+      margin-bottom: 0;
+}
+
+.ucf-autor {
+  font-size: .9rem;
+}
+
+.post-author {
+
+}
+
+.ucf-publish {
+ font-weight: 500;
+}
+
+
+/*
+
+This is css for the sidebar
+ */
+
+#ocs-menu-news {
+  background-color: #222;
+  padding: 4em 3em 2em 4em;
+  z-index: 10000;
+}
+
+#ocs-menu-news a{
+  color: #fff;
+}
