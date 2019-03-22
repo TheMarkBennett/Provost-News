@@ -8,6 +8,9 @@ the_post_navigation( array(
 				) );
 */
  ?>
+ <?php
+if ( is_singular() ):
+  ?>
  <section class="more-aricles mt-3 mb-4">
    <div class="container">
      <div class="row justify-content-center">
@@ -16,4 +19,5 @@ the_post_navigation( array(
        </div>
    </div>
 </section>
+<?php endif; ?>
 <?php get_footer(); ?>
