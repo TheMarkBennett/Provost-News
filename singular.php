@@ -17,6 +17,13 @@ if ( is_singular() ):
        <div class="col-12 col-11 col-md-8">
           <h2 class="text-center">Related Articles</h2>
        </div>
+       <div>
+         <div class="col-12 col-md-8">
+           <?php echo do_shortcode ('[shareaholic app="recommendations" id_name="post_below_content"]'); ?>
+       </div>
+       <div class="col-12 col-md-4">
+        
+     </div>
    </div>
 </section>
 <?php endif; ?>
