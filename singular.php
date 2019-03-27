@@ -14,16 +14,21 @@ if ( is_singular() ):
  <section class="more-aricles mt-3 mb-4">
    <div class="container">
      <div class="row justify-content-center">
-       <div class="col-12 col-11 col-md-8">
-          <h2 class="text-center">Related Articles</h2>
+       <div class="col-11 col-md-8">
+         <div class="row no-gutters">
+
+         <div class="col-12 col-md-7">
+             <h2 class="h5">Recomnended Articles</h2>
+         </div>
+
+       <div class="col-12 col-md-5">
+          <h2 class="h5">Latest Articles</h2>
+
        </div>
-       <div>
-         <div class="col-12 col-md-8">
-           <?php echo do_shortcode ('[shareaholic app="recommendations" id_name="post_below_content"]'); ?>
-       </div>
-       <div class="col-12 col-md-4">
-        
      </div>
+
+     </div>
+   </div>
    </div>
 </section>
 <?php endif; ?>

@@ -1,11 +1,12 @@
 .post-category {
-  text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .post-category a, .post-category a:hover {
   color: #000;
   font-size: .7rem;
+  text-decoration: none;
 }
 
 .post-divider {
@@ -69,4 +70,18 @@ This is css for the sidebar
 
 #ocs-menu-news a{
   color: #fff;
+}
+
+
+
+/*
+Css for the op navigation
+ */
+
+.news-nav {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.navbar-news-custom .navbar-brand {
+  color: #000;
 }
