@@ -61,6 +61,7 @@
 This is css for the sidebar
  */
 
+/*
 #ocs-menu-news {
   background-color: #222;
   padding: 4em 3em 2em 4em;
@@ -70,7 +71,7 @@ This is css for the sidebar
 #ocs-menu-news a{
   color: #fff;
 }
-
+*/
 
 
 /*
@@ -83,8 +84,4 @@ Css for the op navigation
 
 .navbar-news-custom .navbar-brand {
   color: #000;
-}
-
-.test{
-
 }

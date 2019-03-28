@@ -39,7 +39,7 @@ function provost_news_the_custom_logo() {
 
 function ucfwp_get_header_markup(){?>
 
-  <nav class="navbar navbar-toggleable-md navbar-news-custom news-nav" role="navigation" aria-label="Site navigation">
+  <nav class="navbar navbar-toggleable-md navbar-news-custom news-nav pt-md-3 pb-md-2" role="navigation" aria-label="Site navigation">
   	<div class="container d-flex flex-row flex-nowrap justify-content-between">
   		<span class="mb-0">
   			<?php provost_news_the_custom_logo(); ?>
