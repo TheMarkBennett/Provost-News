@@ -15,8 +15,7 @@
 					<div class="mb-4">
 						<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
 						<?php if ( ! has_excerpt() ): ?>
-	          <div class="post-excerpt lead mb-1"> <? //the_excerpt(); ?></div>
-						<meta itemprop='description' content='<? the_excerpt(); ?>'/>
+	          <div class="post-excerpt lead mb-1"> <? //the_excerpt(); ?></div>						
 						<?php endif; ?>
 						<div class="ucf-publish my-1 small text-uppercase">
 							<span class="post-author" itemscope itemprop="author" itemtype="http://schema.org/Person"><?php echo esc_html('By:' ); ?> <span itemprop="name"><?php the_author();?></span> &#183; </span>
