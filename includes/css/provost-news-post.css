@@ -10,7 +10,7 @@
 }
 
 .post-divider {
-  height: 3px;
+  height: 5px;
   background: #ffcc00; /* Old browsers */
   background: -moz-linear-gradient(left,  #C69F00 0%, #C69F00 70%, #ffcc00 70%, #ffcc00 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,#C69F00), color-stop(50%,#C69F00), color-stop(50%,#ffcc00), color-stop(100%,#ffcc00)); /* Chrome,Safari4+ */
@@ -36,8 +36,8 @@
 }
 
 .post-thumb {
-  f
-}
+
+  }
 
 .post-thumb figure {
       margin-bottom: 0;
@@ -86,5 +86,5 @@ Css for the op navigation
 }
 
 .test{
-  
+
 }

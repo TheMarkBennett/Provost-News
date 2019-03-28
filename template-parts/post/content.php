@@ -23,9 +23,10 @@
 							<span class="publish-date text-default-aw" itemprop="datePublished" content="<?php echo get_the_date("Y-d-m"); ?>"> <?php echo get_the_date("M d, Y"); ?> </span>
 					</div>
 				</div>
-					<div class="post-divider1"></div>
+
 
     			<?php if ( has_post_thumbnail() ): ?>
+						<div class="post-divider1"></div>
     				<div class="post-thumb-img-content post-thumb">
               <figure class="figure">
     						<?php the_post_thumbnail( 'large', array( 'class' => 'figure-img img-fluid mx-auto d-block', 'itemprop' => "image" ) ); ?>
