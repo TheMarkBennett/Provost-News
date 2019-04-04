@@ -85,3 +85,93 @@ Css for the op navigation
 .navbar-news-custom .navbar-brand {
   color: #000;
 }
+
+
+/*
+*Home page css
+*
+ */
+
+.ucf-events-modern .ucf-event-when, .ucf-events-modern-nodesc .ucf-event-when {
+  font-size: 1em;
+}
+
+.news-sidebar .ucf-events-modern .ucf-event-start-date, .news-sidebar .ucf-events-modern .ucf-event-start-time,
+.news-sidebar  .ucf-events-modern .ucf-event-title, .news-sidebar  .ucf-events-modern-nodesc .ucf-event-start-date,
+.news-sidebar  .ucf-events-modern-nodesc .ucf-event-start-time
+
+{
+  font-size: .875rem;
+}
+
+.news-sidebar .ucf-events-modern-nodesc .ucf-event-title, .news-sidebar .ucf-news.modern .ucf-news-item-title {
+  font-size: 1em;
+}
+
+.news-sidebar .ucf-events-modern .ucf-event-when, .news-sidebar .ucf-events-modern-nodesc .ucf-event-when {
+  margin-bottom: .0rem;
+}
+
+
+/* homepage header underlined */
+.list-underlined li{
+  padding-bottom: 1em;
+  border-bottom: solid 1px rgba(0,0,0,.2);
+}
+
+.header-underlined {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px rgba(0,0,0,.2);
+}
+
+/*provost news homepage background sizes */
+.news-lg-bg{
+  height: 28em;
+}
+
+.news-md-bg {
+  height: 13.75em;
+
+}
+
+.news-list li {
+  padding-bottom: .5em;
+  margin-bottom: 1em;
+  border-bottom: solid 1px rgba(0,0,0,.2);
+  font-weight: 700;
+
+
+}
+
+.text-shadow {
+  text-shadow:0 2px 8px rgba(1,1,1,0.9);
+}
+
+
+
+.news-lg-bg img:hover,.news-md-bg img:hover {
+  /*-webkit-filter: grayscale(80%);
+  background: rgba(255,204,0, 0.5);*/
+}
+
+.frontpage-news a{
+  color: #000;
+}
+
+.header-tab {
+  padding: .3em .3em;
+  margin-bottom: 0 !important;
+  ;
+}
+
+.gold-divider {
+  border-bottom: 2px solid rgba(255,204,0, 1);
+
+
+}
+
+.affix {
+    top: 10px;
+    z-index: 9999 !important;
+  }
