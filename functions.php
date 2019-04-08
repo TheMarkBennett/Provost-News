@@ -42,3 +42,15 @@ function provost_news_sidebar() {
     );
 }
 add_action( 'widgets_init', 'provost_news_sidebar' );
+
+
+
+
+function frontpage_excerpt_length( $length ) {
+  if(is_singular('post')){
+    continue;
+    }
+    return 30;
+}
+add_filter( 'excerpt_length', 'frontpage_excerpt_length', 999 );
+?>
