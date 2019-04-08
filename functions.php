@@ -53,4 +53,10 @@ function frontpage_excerpt_length( $length ) {
     return 30;
 }
 add_filter( 'excerpt_length', 'frontpage_excerpt_length', 999 );
-?>
+
+
+
+function provost_news_formats_setup() {
+    add_theme_support( 'post-formats', array( 'gallery', 'link', 'video' ) );
+}
+add_action( 'after_setup_theme', 'provost_news_formats_setup' );
