@@ -1,6 +1,12 @@
 <?php
 
 
+function provost_news_get_link(){
+
+
+}
+
+
 function provost_news_featured_article() {
 
 
@@ -41,8 +47,8 @@ $count = 1;
             <?php
                 $format = get_post_format() ? : 'standard';
                 $link_url = get_the_permalink();
-                  if ( $format == 'link' && !empty(get_field( "article_url" ))  ):
-                    $link_url = get_field( "article_url" );
+                  if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                    $link_url = get_field( "pub_article_url" );
                   endif;
             ?>
             <a href="<?php echo esc_url($link_url); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
@@ -73,8 +79,8 @@ $count = 1;
         <?php
             $format = get_post_format() ? : 'standard';
             $link_url = get_the_permalink();
-              if ( $format == 'link' && !empty(get_field( "article_url" ))  ):
-                $link_url = get_field( "article_url" );
+              if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                $link_url = get_field( "pub_article_url" );
               endif;
         ?>
 
@@ -193,17 +199,32 @@ function provost_news_featured_tax() {?>
                               $article_link = esc_url(get_permalink());
                             if($count == 1):?>
 
+                            <?php
+                                $format = get_post_format() ? : 'standard';
+                                $link_url = get_the_permalink();
+                                  if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                                    $link_url = get_field( "pub_article_url" );
+                                  endif;
+                            ?>
+
                             <div class="row">
                               <div class="col-12 col-md-6">
-                                <a href="<?php echo $article_link ?>"><?php the_post_thumbnail( 'medium-large', array('class' => 'img-fluid mb-3')); ?></a>
-                                <h2 class="h4"> <a href="<?php echo $article_link ?>"><?php the_title(); ?></a></h2>
+                                <a href="<?php echo esc_url($link_url); ?>"><?php the_post_thumbnail( 'medium-large', array('class' => 'img-fluid mb-3')); ?></a>
+                                <h2 class="h4"> <a href="<?php echo esc_url($link_url); ?>"><?php the_title(); ?></a></h2>
                                 <p><?php the_excerpt(); ?></p>
                               </div>
                               <div class="col-12 col-md-6">
                                 <ul class="list-unstyled news-list">
                         <?php endif;
                         if($count > 1):?>
-                              <li><a href="<?php echo get_permalink(); ?>"> <?php echo get_the_title(); ?></a></li>
+                        <?php
+                            $format = get_post_format() ? : 'standard';
+                            $link_url = get_the_permalink();
+                              if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                                $link_url = get_field( "pub_article_url" );
+                              endif;
+                        ?>
+                              <li><a href="<?php echo esc_url($link_url); ?>"> <?php echo get_the_title(); ?></a></li>
                           <?php endif;
                           $count++;
                         endwhile; ?>
