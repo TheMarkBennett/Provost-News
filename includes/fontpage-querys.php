@@ -11,6 +11,13 @@ function provost_news_featured_article() {
   'order'                  => 'DESC',
   'orderby'                => 'date',
   'posts_per_page'          => 3,
+  'meta_query' => array(
+		        array(
+			'key'     => '_thumbnail_id',
+			'value'   => '',
+			'compare' => '!=',
+		        )
+         	      )
 
 
   );
@@ -31,7 +38,14 @@ $count = 1;
       if($count==1):?>
         <div class="col-12 col-md-7 p-1">
           <article class="left-featured post-<?php the_ID(); ?>">
-            <a href="<?php the_permalink(); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
+            <?php
+                $format = get_post_format() ? : 'standard';
+                $link_url = get_the_permalink();
+                  if ( $format == 'link' && !empty(get_field( "article_url" ))  ):
+                    $link_url = get_field( "article_url" );
+                  endif;
+            ?>
+            <a href="<?php echo esc_url($link_url); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
                 <?php the_post_thumbnail( 'large', array('class' => 'media-background object-fit-cover img-fluid hover-scale-up')); ?>
                 <div class="align-self-end featured-text">
                   <div class="home-cat">
@@ -56,8 +70,16 @@ $count = 1;
             <div class="col-12 col-md-5 p-1">
         <?php endif;?>
 
+        <?php
+            $format = get_post_format() ? : 'standard';
+            $link_url = get_the_permalink();
+              if ( $format == 'link' && !empty(get_field( "article_url" ))  ):
+                $link_url = get_field( "article_url" );
+              endif;
+        ?>
+
             <article class="right-featured post-<?php the_ID(); ?>">
-              <a href="<?php the_permalink(); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-md-bg mb-2">
+              <a href="<?php echo esc_url($link_url); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-md-bg mb-2">
                 <?php the_post_thumbnail( 'large', array('class' => 'media-background object-fit-cover img-fluid hover-scale-up')); ?>
                 <div class="align-self-end">
                   <div class="home-cat">
