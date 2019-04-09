@@ -40,13 +40,11 @@ $count = 1;
                 $format = get_post_format() ? : 'standard';
                 $link_url = get_the_permalink();
 
-                 if( get_field('pub_article_url') ):
-                  if ( $format == 'link'  ):
+                 if( get_field('pub_article_url') && && ($format == 'link' ) ):
                     $link_url = get_field( "pub_article_url" );
-                  endif;
                 endif;
             ?>
-            <a href="<?php echo esc_url( $link_url ); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
+            <a href="<?php echo $link_url ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
                 <?php the_post_thumbnail( 'large', array('class' => 'media-background object-fit-cover img-fluid hover-scale-up')); ?>
                 <div class="align-self-end featured-text">
                   <div class="home-cat">
@@ -74,15 +72,13 @@ $count = 1;
         <?php
             $format = get_post_format() ? : 'standard';
             $link_url = get_the_permalink();
-            if( get_field('pub_article_url') ):
-             if ( $format == 'link'  ):
+            if( get_field('pub_article_url')  && ($format == 'link' )):
                $link_url = get_field( "pub_article_url" );
-             endif;
            endif;
         ?>
 
             <article class="right-featured post-<?php the_ID(); ?>">
-              <a href="<?php echo esc_url( $link_url ); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-md-bg mb-2">
+              <a href="<?php echo $link_url ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-md-bg mb-2">
                 <?php the_post_thumbnail( 'large', array('class' => 'media-background object-fit-cover img-fluid hover-scale-up')); ?>
                 <div class="align-self-end">
                   <div class="home-cat">
@@ -199,17 +195,15 @@ function provost_news_featured_tax() {?>
                             <?php
                                 $format = get_post_format() ? : 'standard';
                                 $link_url = get_the_permalink();
-                                if( get_field('pub_article_url') ):
-                                 if ( $format == 'link'  ):
-                                   $link_url = get_field( "pub_article_url" );
-                                 endif;
+                                if( get_field('pub_article_url') && && ($format == 'link' )):
+                                  $link_url = get_field( "pub_article_url" );
                                endif;
                             ?>
 
                             <div class="row">
                               <div class="col-12 col-md-6">
-                                <a href="<?php echo esc_url($link_url); ?>"><?php the_post_thumbnail( 'medium-large', array('class' => 'img-fluid mb-3')); ?></a>
-                                <h2 class="h4"> <a href="<?php echo esc_url($link_url); ?>"><?php the_title(); ?></a></h2>
+                                <a href="<?php echo $link_url; ?>"><?php the_post_thumbnail( 'medium-large', array('class' => 'img-fluid mb-3')); ?></a>
+                                <h2 class="h4"> <a href="<?php echo $link_url ?>"><?php the_title(); ?></a></h2>
                                 <p><?php the_excerpt(); ?></p>
                               </div>
                               <div class="col-12 col-md-6">
@@ -219,13 +213,11 @@ function provost_news_featured_tax() {?>
                         <?php
                             $format = get_post_format() ? : 'standard';
                             $link_url = get_the_permalink();
-                            if( get_field('pub_article_url') ):
-                             if ( $format == 'link'  ):
+                            if( get_field('pub_article_url') && ($format == 'link' )):
                                $link_url = get_field( "pub_article_url" );
-                             endif;
                            endif;
                         ?>
-                              <li><a href="<?php echo esc_url($link_url); ?>"> <?php echo get_the_title(); ?></a></li>
+                              <li><a href="<?php echo $link_url; ?>"> <?php echo get_the_title(); ?></a></li>
                           <?php endif;
                           $count++;
                         endwhile; ?>
@@ -238,62 +230,3 @@ function provost_news_featured_tax() {?>
                       ?> </section> <?php
                   }?>
           <?php }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function provost_news_homepage_articles() {
-
-  // WP_Query arguments
- $args = array(
- 	'post_type'              => array( 'post' ),
- 	'post_status'            => array( 'publish' ),
- 	'order'                  => 'DESC',
- 	'orderby'                => 'date',
-  'posts_per_page'         => 2,
-  'offset'                 => 1,
-
- );
-
- // The Query
- $featured = new WP_Query( $args );
-
- // The Loop
- if ( $featured->have_posts() ) {
-   ?>
-    <div class="two-articles row no-gutters mt-4 mb-3">
-   <?php
- 	while ( $featured->have_posts() ) {
- 		$featured->the_post();
-?>
-      <div class="col-12 col-md-6 px-2">
-        <?php the_post_thumbnail( 'large', array('class' => 'featured-img img-fluid mb-2')); ?>
-        <a href="<?php the_permalink(); ?>"><?php the_title('<h2 class="">', '</h2>'); ?></a>
-        <p><?php the_excerpt(); ?></p>
-        <a href="<?php the_permalink(); ?>"  > Read More ></a>
-      </div>
-
-    <?php
- 	}
-?></div>  <?php
- } else {
- 	// no posts found
- }
-
- // Restore original Post Data
- wp_reset_postdata();
-
-
-}
