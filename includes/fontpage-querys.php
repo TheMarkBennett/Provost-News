@@ -46,7 +46,7 @@ $count = 1;
                   endif;
                 endif;
             ?>
-            <a href="<?php echo esc_url($link_url); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
+            <a href="<?php echo esc_url( $link_url ); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-lg-bg">
                 <?php the_post_thumbnail( 'large', array('class' => 'media-background object-fit-cover img-fluid hover-scale-up')); ?>
                 <div class="align-self-end featured-text">
                   <div class="home-cat">
@@ -82,7 +82,7 @@ $count = 1;
         ?>
 
             <article class="right-featured post-<?php the_ID(); ?>">
-              <a href="<?php echo esc_url($link_url); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-md-bg mb-2">
+              <a href="<?php echo esc_url( $link_url ); ?>" class="d-flex w-100 p-4 media-background-container text-inverse text-decoration-none news-md-bg mb-2">
                 <?php the_post_thumbnail( 'large', array('class' => 'media-background object-fit-cover img-fluid hover-scale-up')); ?>
                 <div class="align-self-end">
                   <div class="home-cat">
