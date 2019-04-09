@@ -41,7 +41,7 @@ $count = 1;
                 $link_url = get_the_permalink();
 
                  if( get_field('pub_article_url') ):
-                  if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                  if ( $format == 'link'  ):
                     $link_url = get_field( "pub_article_url" );
                   endif;
                 endif;
@@ -75,7 +75,7 @@ $count = 1;
             $format = get_post_format() ? : 'standard';
             $link_url = get_the_permalink();
             if( get_field('pub_article_url') ):
-             if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+             if ( $format == 'link'  ):
                $link_url = get_field( "pub_article_url" );
              endif;
            endif;
@@ -200,7 +200,7 @@ function provost_news_featured_tax() {?>
                                 $format = get_post_format() ? : 'standard';
                                 $link_url = get_the_permalink();
                                 if( get_field('pub_article_url') ):
-                                 if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                                 if ( $format == 'link'  ):
                                    $link_url = get_field( "pub_article_url" );
                                  endif;
                                endif;
@@ -220,7 +220,7 @@ function provost_news_featured_tax() {?>
                             $format = get_post_format() ? : 'standard';
                             $link_url = get_the_permalink();
                             if( get_field('pub_article_url') ):
-                             if ( $format == 'link' && !empty(get_field( "pub_article_url" ))  ):
+                             if ( $format == 'link'  ):
                                $link_url = get_field( "pub_article_url" );
                              endif;
                            endif;
