@@ -2,7 +2,6 @@
 
 function provost_news_featured_article() {
 
-
   // WP_Query arguments
   $args = array(
   'post_type'              => array( 'post' ),
