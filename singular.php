@@ -1,5 +1,6 @@
 <?php get_header(); the_post(); ?>
 
+
 <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" class="post-<?php the_ID(); ?> <?php echo $post->post_status; ?> post-list-item">
 	<div class="container mt-3 mt-sm-2 mb-3 pb-sm-4 ucf-news-entry">
 
@@ -14,4 +15,5 @@
 </article><!-- #post-## -->
 <?php provost_news_entry_recomended(); //recommended post ?>
 <?php //get_template_part( 'template-parts/post/content', get_post_format() ); ?>
+<?php do_action('website_after'); ?>
 <?php get_footer(); ?>

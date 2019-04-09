@@ -27,6 +27,7 @@ function provost_news_the_custom_logo() { // display logo
 
 
 function ucfwp_get_header_markup(){?>
+	<?php do_action('website_before'); ?>
   <div class="container top-nav">
     <div class="d-flex justify-content-end">
       <ul class="mb-0 pt-2 small list-unstyled">
