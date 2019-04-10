@@ -39,6 +39,20 @@ function provost_news_sidebar() {
             'before_title' => '<h3 class="widget-title h6 py-2 px-3 bg-inverse text-uppercase font-weight-bold">',
             'after_title' => '</h3>',
         )
+
+    );
+
+    register_sidebar(
+        array (
+            'name' => __( 'Social' ),
+            'id' => 'social_sidebar',
+            'description' => __( 'Display at the top of articles and catagories' ),
+            'before_widget' => '<div class="social-content">',
+            'after_widget' => "</div>",
+            'before_title' => '<div class="">',
+            'after_title' => '</div>',
+        )
+
     );
 }
 add_action( 'widgets_init', 'provost_news_sidebar' );

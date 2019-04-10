@@ -162,9 +162,9 @@ function provost_news_featured_tax() {?>
                              <h2 class="h6 bg-primary header-tab text-uppercase"><?php echo esc_html($category->name); ?></h2>
                            </div>
                            <div class="home-more">
-                             <div>
 
-                               <ul class="list-inline list-unstyled mb-0">
+
+                               <ul class="list-inline sub-categories small list-unstyled mb-0">
                                  <li class="child-cat list-inline-item"><a href="<?php echo esc_url( $category_link ); ?>"> All</a> </li>
                                   <?php
                                     $parent = array('child_of' => $category->term_id);
@@ -183,7 +183,7 @@ function provost_news_featured_tax() {?>
                               </ul>
 
                                <!--<a href="<?php //echo esc_url( $category_link ); ?>"> View More >></a> -->
-                             </div>
+
                            </div>
                          </div>
                          <?php

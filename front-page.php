@@ -18,11 +18,7 @@
           </div>
 
         <div class="col-12 col-md-4">
-          <aside class="news-sidebar">
-              <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-                <?php dynamic_sidebar( 'sidebar-1' ); ?>
-              <?php endif; ?>
-          </aside>
+          <?php get_sidebar(); ?>
         </div>
     </div>
 	 </div>
