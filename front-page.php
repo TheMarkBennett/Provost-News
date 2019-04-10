@@ -27,5 +27,4 @@
     </div>
 	 </div>
   </div>
-<?php do_action('website_after'); ?>
 <?php get_footer(); ?>

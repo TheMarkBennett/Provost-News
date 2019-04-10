@@ -15,5 +15,5 @@
 </article><!-- #post-## -->
 <?php provost_news_entry_recomended(); //recommended post ?>
 <?php //get_template_part( 'template-parts/post/content', get_post_format() ); ?>
-<?php do_action('website_after'); ?>
+
 <?php get_footer(); ?>
